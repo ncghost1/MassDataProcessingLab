@@ -7,9 +7,9 @@
 ### 一、 海量数据中的最值问题：<br>
 | 题目 | lab链接 | answer链接 |
 | - | :-: | - |
-| 1. 海量日志数据，提取出访问次数最多的IP： | [MaxCountIP_lab](https://github.com/ncghost1/MassDataProcessingDemo/blob/main/MaxValueProblem/MaxCountIP/lab/MaxCountIP_lab.go) | [MaxCountIP](https://github.com/ncghost1/MassDataProcessingDemo/blob/main/MaxValueProblem/MaxCountIP/answer/MaxCountIP.go) |
+| 1. 海量日志数据，提取出访问次数最多的IP： | [MaxCountIP_lab](https://github.com/ncghost1/MassDataProcessingLab/tree/main/MaxValueProblem/MaxCountIP/lab) | [MaxCountIP](https://github.com/ncghost1/MassDataProcessingLab/tree/main/MaxValueProblem/MaxCountIP/answer) |
 
-### 二、海量数据的 top K问题：<br>
+### 二、海量数据的 top K 问题：<br>
 | 题目 | lab链接 | answer链接 |
 | - | :-: | - |
 | 1. 如何在海量数据中找出最大的 100 个数： | 施工中  | 施工中 |
