@@ -185,10 +185,11 @@ func (h *ItemHeap) Pop() interface{} {
 func GetMax() Item {
 	h := &ItemHeap{}
 
-	// heap sort （我们使用堆排序来找出最大值）
-
-	// get the Item(IP,count) which has the maximum count
-	// 获取保存了出现次数最多的 IP 与它的出现次数的二元组 Item
+	// Step1: heap sort 
+	// 第一步：使用堆排序找出最大值（上面已实现堆排序相关接口，当然你也可以使用别的方式）
+	
+	// Step2: get the Item(IP,count) which has the maximum count
+	// 第二步： 获取保存了出现次数最多的 IP 与它的出现次数的二元组 Item
 
 }
 
