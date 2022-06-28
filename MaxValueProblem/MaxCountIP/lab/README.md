@@ -1,7 +1,7 @@
 ## lab 题目：海量日志数据，提取出访问次数最多的IP
 ### 任务说明：
 **Task 1: 完善 SplitBigFile 函数**<br>
-SplitBigFile 函数实现将源文件（大文件）分割成多个小文件，也就是我们要做的第一步：分而治之。
+SplitBigFile 函数实现将源文件（大文件）分割成多个小文件，也就是我们要做的第一步：分而治之。<br>
 **Task 2: 完善 GetPartMax 函数**<br>
 GetPartMax 函数获取每个小文件中出现次数最多的 IP，将该 IP 与计数值保存到代码中提供的 partMaxVal 哈希表中。<br>
 **Task 3: 完善 GetMax 函数**<br>
