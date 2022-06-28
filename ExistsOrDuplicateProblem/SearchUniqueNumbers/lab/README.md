@@ -11,7 +11,7 @@ grow 用于扩展 2-Bitmap 的空间。<br>
 SetBit 用于设置 2-Bitmap 中指定位置的值（设置2位）。<br>
 GetBit 用于获取 2-Bitmap 中指定位置的值（取出2位）。<br>
 **Task 2: 完善 ReadData 函数**<br>
-ReadData 函数用于读取大文件中的数据，我们需要在读取的同时进行 2-BitMap 的存储。
+ReadData 函数用于读取大文件中的数据，我们需要在读取的同时进行 2-BitMap 的存储。<br>
 **Task 3: 完善 SearchUniqueNumbers 函数**<br>
 SearchUniqueNumbers 函数找出所有只出现过一次的整数，并返回一个包含所有只出现过一次的整数的切片。
 
