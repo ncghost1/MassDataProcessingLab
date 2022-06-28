@@ -1,9 +1,8 @@
-package main
+package MaxCountIPAnswer
 
 import (
 	"bufio"
 	"container/heap"
-	"fmt"
 	"github.com/dchest/siphash"
 	"math/rand"
 	"os"
@@ -17,15 +16,17 @@ const (
 	baseKey = "MassDataProcess1" // For sipHash （用于sipHash）
 )
 
-// RowSum: Total number of IP （IP 总数）
 // NumPartFile: Number of partition file （小文件/分割文件数量）
 // partFile: An array that holds pointers to partition files (存放指向小文件的文件指针的数组）
 // partMaxVal: A map that stores the maximum count of IP in each partition file and its count （保存每个小文件中出现次数最多的 IP 和它的次数的 map）
+// srcPath: Source file path 源文件（大文件）路径
+// partPathPrefix: partition path prefix 小文件的路径前缀
 var (
-	RowSum      = 1000000
-	NumPartFile = uint64(100)
-	partFile    = make([]*os.File, NumPartFile)
-	partMaxVal  = make(map[string]uint64, NumPartFile)
+	NumPartFile    = uint64(100)
+	partFile       = make([]*os.File, NumPartFile)
+	partMaxVal     = make(map[string]uint64, NumPartFile)
+	srcPath        = "SourceFile.txt"
+	partPathPrefix = "partFile"
 )
 
 func GenerateIP() string {
@@ -42,20 +43,20 @@ func GenerateIP() string {
 	return IP
 }
 
-func GenerateBigFile() {
+func GenerateBigFile(RowSum int) {
 	// First: clear file (if it exists)
 	// 首先清空文件内容（如果文件存在的话）
-	err := os.Truncate("./MaxValueProblem/SourceFile.txt", 0)
+	err := os.Truncate(srcPath, 0)
 	if err != nil {
 		panic(err)
 	}
-	f, err := os.OpenFile("./MaxValueProblem/SourceFile.txt", os.O_CREATE|os.O_WRONLY|os.O_APPEND, 0777)
+	f, err := os.OpenFile(srcPath, os.O_CREATE|os.O_WRONLY|os.O_APPEND, 0777)
 	defer f.Close()
 	if err != nil {
 		panic(err)
 	}
-	// Generate a big file containing 1 million IP
-	// 生成包含一百万个 IP 的大文件
+	// Generate the big file
+	// 生成大文件
 	for i := 0; i < RowSum; i++ {
 		str := GenerateIP() + "\n"
 		_, err := f.WriteString(str)
@@ -65,8 +66,8 @@ func GenerateBigFile() {
 	}
 }
 
-func SplitBigFile() {
-	srcFile, err := os.Open("./MaxValueProblem/SourceFile.txt")
+func SplitBigFile(NumPartFile uint64) {
+	srcFile, err := os.Open(srcPath)
 	defer srcFile.Close()
 	if err != nil {
 		panic(err)
@@ -79,7 +80,7 @@ func SplitBigFile() {
 	// Create partFile
 	// 创建小文件
 	for i := 0; i < len(partFile); i++ {
-		file, err := os.OpenFile("./MaxValueProblem/PartFile"+strconv.Itoa(i)+".txt", os.O_CREATE|os.O_RDWR, 0777)
+		file, err := os.OpenFile(partPathPrefix+strconv.Itoa(i), os.O_CREATE|os.O_RDWR, 0777)
 		partFile[i] = file
 		if err != nil {
 			panic(err)
@@ -120,9 +121,9 @@ func GetPartMax() {
 		if err != nil {
 			panic(err)
 		}
+		scanner := bufio.NewScanner(f)
 		var MaxIP string
 		var MaxCount uint64
-		scanner := bufio.NewScanner(f)
 
 		// Scan the current partition file to get the MaxIP and MaxCount
 		// 扫描当前小文件，获取该文件中出现次数最多的 IP 和 出现次数
@@ -194,38 +195,9 @@ func GetMax() Item {
 func RemoveAndClosePartFile() {
 	for i := 0; i < len(partFile); i++ {
 		partFile[i].Close()
-		os.Remove("./MaxValueProblem/partFile" + strconv.Itoa(i) + ".txt")
+		err := os.Remove(partPathPrefix + strconv.Itoa(i))
+		if err != nil {
+			panic(err)
+		}
 	}
-}
-
-func main() {
-	fmt.Println("---Get the IP with the maximum count---")
-
-	// This process could take a while, you can set RowSum smaller to speed up.
-	// 生成大文件会花上一段时间，你可以调小 RowSum 使生成 IP 数量少一些来加速生成
-	GenerateBigFile()
-	fmt.Println("Process: GenerateBigFile is completed.")
-
-	// Step 1: split source file to each partition file
-	// 第一步：分而治之
-	SplitBigFile()
-	fmt.Println("Process: SplitBigFile is completed.")
-
-	// Step 2: get the IP with the maximum count in each partition file,
-	// the IP and its count will be saved to the 'partMaxVal'.
-	// 第二步：获取每个小文件中出现次数最多的 IP，IP 与计数会被保存到 partMaxVal 哈希表中
-	GetPartMax()
-	fmt.Println("Process: GetPartMax is completed.")
-
-	// Step 3: use partMaxVal and heap sort to get the Item(IP,count) which has the maximum count.
-	// Note that if there are multiple max values, we only get one of them
-	// 第三步：在上一步我们获得了每个分区文件中出现次数最多的 IP 和它的次数，它们被保存在 partMaxVal 中，
-	// 这一步我们使用 partMaxVal 和堆排序获取出现次数最多的 IP 与它的出现次数，并保存在 Item 二元组中返回
-	// 注意如果有多个 IP 出现次数都为最大值，我们只返回其中一个
-	result := GetMax()
-	fmt.Println("Process: GetMax is completed.")
-	fmt.Println("Result IP: " + result.IP)
-	fmt.Println("Result count: " + strconv.FormatUint(result.count, 10))
-
-	RemoveAndClosePartFile()
 }
