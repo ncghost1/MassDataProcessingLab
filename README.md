@@ -12,7 +12,7 @@
 ### 二、海量数据的某个数据是否存在或重复存在的问题：<br>
 | 题目 | lab链接 | answer链接 |
 | - | :-: | :-: |
-| 1. 给出海量的不重复整数，之后指定一个数，快速判断指定数字是否存在 | [IsExistsOrNot_lab](https://github.com/ncghost1/MassDataProcessingLab/tree/main/DuplicateProblem/IsExistsOrNot/lab)  | [IsExistsOrNot](https://github.com/ncghost1/MassDataProcessingLab/tree/main/DuplicateProblem/IsExistsOrNot/answer) |
+| 1. 给出海量的不重复整数，之后指定一个数，快速判断指定数字是否存在 | [IsExistsOrNot_lab](https://github.com/ncghost1/MassDataProcessingLab/tree/main/ExistsOrDuplicateProblem/IsExistsOrNot/lab)  | [IsExistsOrNot](https://github.com/ncghost1/MassDataProcessingLab/tree/main/ExistsOrDuplicateProblem/IsExistsOrNot/answer) |
 | 2. 海量整数中找出不重复的整数 | 施工中 | 施工中 |
 
 ### 三、海量数据的 top K 问题：<br>
