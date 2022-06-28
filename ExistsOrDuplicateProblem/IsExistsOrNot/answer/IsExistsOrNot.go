@@ -72,7 +72,7 @@ func (b *bitmap) SetBit(bitPos uint64) {
 // GetBit 获取第 bitPos 位的值（0或1）
 func (b *bitmap) GetBit(bitPos uint64) int {
 	bytePos := bitPos / 8
-	if bytePos >= uint64(cap(b.bitmap)) || bitPos < 0 {
+	if bytePos >= uint64(cap(b.bitmap)) {
 		return 0
 	} else {
 		bit := b.bitmap[bytePos] & (1 << ((bitPos) % 8))
