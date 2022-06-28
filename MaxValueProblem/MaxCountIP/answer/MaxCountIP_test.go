@@ -13,8 +13,8 @@ func TestMaxCountIP(t *testing.T) {
 
 	// This process could take a while, you can set RowSum smaller to speed up.
 	// 生成大文件会花上一段时间，你可以调小 RowSum 使生成 IP 数量少一些来加速生成
-	RowSum := 1000000 // We generate 1 million IPs for testing 我们生成100万个 IP 进行测试
-	GenerateBigFile(RowSum)
+	Row := 1000000 // We generate 1 million IPs for testing 我们生成100万个 IP 进行测试
+	GenerateBigFile(Row)
 	fmt.Println("Process: GenerateBigFile is completed.")
 
 	// Step 1: split source file to each partition file

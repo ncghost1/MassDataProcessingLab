@@ -8,7 +8,7 @@ import (
 
 func TestMaxCountIP(t *testing.T) {
 	fmt.Println("---Lab Test: Get the IP with the maximum count---")
-	MaxIP := "192.168.0.1"
+	MaxIP := GenerateIP()
 	MaxCount := 100
 	GenerateBigFileForTest(MaxIP, MaxCount)
 	fmt.Println("Process: GenerateBigFile is completed.")

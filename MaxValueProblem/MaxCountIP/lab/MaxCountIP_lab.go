@@ -40,7 +40,7 @@ func GenerateIP() string {
 	return IP
 }
 
-func GenerateBigFile(RowSum int) {
+func GenerateBigFile(Row int) {
 	// First: clear file (if it exists)
 	// 首先清空文件内容（如果文件存在的话）
 	err := os.Truncate(srcPath, 0)
@@ -54,7 +54,7 @@ func GenerateBigFile(RowSum int) {
 	}
 	// Generate the big file
 	// 生成大文件
-	for i := 0; i < RowSum; i++ {
+	for i := 0; i < Row; i++ {
 		str := GenerateIP() + "\n"
 		_, err := f.WriteString(str)
 		if err != nil {
@@ -185,9 +185,9 @@ func (h *ItemHeap) Pop() interface{} {
 func GetMax() Item {
 	h := &ItemHeap{}
 
-	// Step1: heap sort 
+	// Step1: heap sort
 	// 第一步：使用堆排序找出最大值（上面已实现堆排序相关接口，当然你也可以使用别的方式）
-	
+
 	// Step2: get the Item(IP,count) which has the maximum count
 	// 第二步： 获取保存了出现次数最多的 IP 与它的出现次数的二元组 Item
 

@@ -43,7 +43,7 @@ func GenerateIP() string {
 	return IP
 }
 
-func GenerateBigFile(RowSum int) {
+func GenerateBigFile(Row int) {
 	// First: clear file (if it exists)
 	// 首先清空文件内容（如果文件存在的话）
 	err := os.Truncate(srcPath, 0)
@@ -57,7 +57,7 @@ func GenerateBigFile(RowSum int) {
 	}
 	// Generate the big file
 	// 生成大文件
-	for i := 0; i < RowSum; i++ {
+	for i := 0; i < Row; i++ {
 		str := GenerateIP() + "\n"
 		_, err := f.WriteString(str)
 		if err != nil {
