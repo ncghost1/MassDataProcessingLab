@@ -63,8 +63,8 @@ func GenerateBigFile(Row int) {
 	}
 }
 
+// GenerateBigFileForTest used in lab testing
 func GenerateBigFileForTest(maxIP string, maxCount int) {
-	// Use in lab test
 	err := os.Truncate(srcPath, 0)
 	if err != nil {
 		panic(err)

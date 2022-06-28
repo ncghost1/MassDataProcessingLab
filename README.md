@@ -9,7 +9,13 @@
 | - | :-: | - |
 | 1. 海量日志数据，提取出访问次数最多的IP： | [MaxCountIP_lab](https://github.com/ncghost1/MassDataProcessingLab/tree/main/MaxValueProblem/MaxCountIP/lab) | [MaxCountIP](https://github.com/ncghost1/MassDataProcessingLab/tree/main/MaxValueProblem/MaxCountIP/answer) |
 
-### 二、海量数据的 top K 问题：<br>
+### 二、海量数据的某个数据是否存在或重复存在的问题：<br>
+| 题目 | lab链接 | answer链接 |
+| - | :-: | - |
+| 1. 给出海量的不重复整数，之后指定一个数，快速判断指定数字是否存在 | 施工中  | 施工中 |
+| 2. 海量整数中找出不重复的整数 | 施工中  | 施工中 |
+
+### 三、海量数据的 top K 问题：<br>
 | 题目 | lab链接 | answer链接 |
 | - | :-: | - |
 | 1. 如何在海量数据中找出最大的 100 个数： | 施工中  | 施工中 |
