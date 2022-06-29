@@ -12,11 +12,11 @@
 ### 二、海量数据的某个数据是否存在或重复存在的问题：<br>
 | 题目 | lab 链接 | answer 链接 |
 | - | :-: | :-: |
-| 1. 给出海量的不重复整数，之后指定一个数，快速判断指定数字是否存在 | [IsExistsOrNot_lab](https://github.com/ncghost1/MassDataProcessingLab/tree/main/ExistsOrDuplicateProblem/IsExistsOrNot/lab)  | [IsExistsOrNot_answer](https://github.com/ncghost1/MassDataProcessingLab/tree/main/ExistsOrDuplicateProblem/IsExistsOrNot/answer) |
+| 1. 给出海量的不重复整数，之后指定一个数，快速判断指定数字是否存在 | [IsExistsOrNot_lab](https://github.com/ncghost1/MassDataProcessingLab/tree/main/ExistsOrDuplicateProblem/IsExistsOrNot/lab) | [IsExistsOrNot_answer](https://github.com/ncghost1/MassDataProcessingLab/tree/main/ExistsOrDuplicateProblem/IsExistsOrNot/answer) |
 | 2. 海量整数中找出不重复的整数 | [SearchUniqueNumbers_lab](https://github.com/ncghost1/MassDataProcessingLab/tree/main/ExistsOrDuplicateProblem/SearchUniqueNumbers/lab) | [SearchUniqueNumbers_answer](https://github.com/ncghost1/MassDataProcessingLab/tree/main/ExistsOrDuplicateProblem/SearchUniqueNumbers/answer) |
 
 ### 三、海量数据的 top K 问题：<br>
 | 题目 | lab链接 | answer链接 |
 | - | :-: | :-: |
-| 1. 如何在海量数据中找出最大的 10 个数： | 施工中  | 施工中 |
+| 1. 如何在海量数据中找出最大的 10 个数： | [FindTop10Numbers_lab](https://github.com/ncghost1/MassDataProcessingLab/tree/main/TopKProblem/FindTop10Numbers/lab) | [FindTop10Numbers_answer](https://github.com/ncghost1/MassDataProcessingLab/tree/main/TopKProblem/FindTop10Numbers/answer) |
 
