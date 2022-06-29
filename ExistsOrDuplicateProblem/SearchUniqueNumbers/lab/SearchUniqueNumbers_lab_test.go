@@ -9,7 +9,9 @@ import (
 
 func TestUniqueNumber(t *testing.T) {
 	fmt.Println("---Lab Test: Search Unique Numbers---")
-	Row := uint64(100)
+	// Only 100000 numbers are generated for fast testing
+	// 为了快速测试，所以只生成 100000 个数字，当然你也可以自己修改
+	Row := uint64(100000)
 	UniqueNumbersCount := 3
 	UniqueNumbers := make([]uint32, UniqueNumbersCount)
 	rand.Seed(time.Now().Unix())

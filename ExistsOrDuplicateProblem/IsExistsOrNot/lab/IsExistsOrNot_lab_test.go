@@ -8,7 +8,9 @@ import (
 
 func TestIsExistsOrNot(t *testing.T) {
 	fmt.Println("---Lab Test: Is the number exists or Not---")
-	Row := uint64(10000)
+	// Only 100000 numbers are generated for fast testing
+	// 为了快速测试，所以只生成 100000 个数字，当然你也可以自己修改
+	Row := uint64(100000)
 	NotExistsNum := rand.Uint64() % Row
 	GenerateBigFileForTest(Row, NotExistsNum)
 	fmt.Println("Process: GenerateBigFile is completed.")

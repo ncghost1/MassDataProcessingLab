@@ -153,7 +153,7 @@ type Item struct {
 type ItemHeap []Item
 
 // The following is the implementation of heap.Interface
-// 以下是对堆的接口的实现
+// 以下是对堆的接口的实现，已保证是大根堆（Pop 出的是最大值）
 
 func (h ItemHeap) Len() int { return len(h) }
 

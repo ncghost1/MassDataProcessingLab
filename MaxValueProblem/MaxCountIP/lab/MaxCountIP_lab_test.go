@@ -9,6 +9,8 @@ import (
 func TestMaxCountIP(t *testing.T) {
 	fmt.Println("---Lab Test: Get the IP with the maximum count---")
 	MaxIP := GenerateIP()
+	// Only 10000 IPs are generated for fast testing
+	// 为了快速测试，所以只生成 10000 条 IP，当然你也可以自己修改
 	MaxCount := 10000
 	GenerateBigFileForTest(MaxIP, MaxCount)
 	fmt.Println("Process: GenerateBigFile is completed.")
