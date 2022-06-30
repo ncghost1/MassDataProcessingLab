@@ -16,6 +16,7 @@ func TestFindTop10Numbers(t *testing.T) {
 
 	// Step 1: split source file to each partition file
 	// 第一步：分而治之
+	defer RemoveAndClosePartFile()
 	SplitBigFile(NumPartFile)
 	fmt.Println("Process: SplitBigFile is completed.")
 
@@ -33,5 +34,4 @@ func TestFindTop10Numbers(t *testing.T) {
 	for i := 0; i < len(res); i++ {
 		fmt.Print("NO.", i+1, res[i], "\n")
 	}
-	RemoveAndClosePartFile()
 }

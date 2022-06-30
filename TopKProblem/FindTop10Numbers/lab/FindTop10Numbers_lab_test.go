@@ -43,6 +43,7 @@ func TestFindTop10Numbers(t *testing.T) {
 
 	// Step 1: split source file to each partition file
 	// 第一步：分而治之
+	defer RemoveAndClosePartFile()
 	SplitBigFile(NumPartFile)
 	fmt.Println("Process: SplitBigFile is completed.")
 
@@ -55,7 +56,6 @@ func TestFindTop10Numbers(t *testing.T) {
 	// Step 3: use TopHeap to get the Top 10 numbers
 	// 第三步：最后使用 TopHeap 获取最大的十个数字
 	result := GetTop10()
-	RemoveAndClosePartFile()
 	fmt.Println("Process: GetTop10 is completed.")
 	fmt.Println("Top10 Numbers:")
 	for i := 0; i < len(result); i++ {

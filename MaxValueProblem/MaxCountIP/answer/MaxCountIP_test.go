@@ -7,7 +7,9 @@ import (
 )
 
 // This is not actually a test, but a reference to the implementation steps
+// If you want to test the answer code, you can copy the code to lab code and run lab test
 // 这并不是测试，而是实现步骤的参考
+// 若你要测试 answer 代码，你可以将 answer 代码复制到 lab 代码中，并运行 lab 的测试
 func TestMaxCountIP(t *testing.T) {
 	fmt.Println("---Get the IP with the maximum count---")
 
@@ -19,6 +21,7 @@ func TestMaxCountIP(t *testing.T) {
 
 	// Step 1: split source file to each partition file
 	// 第一步：分而治之
+	defer RemoveAndClosePartFile()
 	SplitBigFile(NumPartFile)
 	fmt.Println("Process: SplitBigFile is completed.")
 
@@ -37,6 +40,4 @@ func TestMaxCountIP(t *testing.T) {
 	fmt.Println("Process: GetMax is completed.")
 	fmt.Println("Result IP: " + result.IP)
 	fmt.Println("Result count: " + strconv.FormatUint(result.count, 10))
-
-	RemoveAndClosePartFile()
 }

@@ -15,6 +15,7 @@ func TestMaxCountIP(t *testing.T) {
 	GenerateBigFileForTest(MaxIP, MaxCount)
 	fmt.Println("Process: GenerateBigFile is completed.")
 
+	defer RemoveAndClosePartFile()
 	SplitBigFile(NumPartFile)
 	fmt.Println("Process: SplitBigFile is completed.")
 
@@ -25,7 +26,6 @@ func TestMaxCountIP(t *testing.T) {
 	fmt.Println("Process: GetMax is completed.")
 	fmt.Println("Result IP: " + result.IP)
 	fmt.Println("Result count: " + strconv.FormatUint(result.count, 10))
-	RemoveAndClosePartFile()
 
 	if result.IP != MaxIP {
 		t.Errorf("expected IP: %v ,actual:%v", MaxIP, result.IP)

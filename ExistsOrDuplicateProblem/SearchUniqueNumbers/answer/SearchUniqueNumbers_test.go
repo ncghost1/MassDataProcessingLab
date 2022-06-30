@@ -5,6 +5,10 @@ import (
 	"testing"
 )
 
+// This is not actually a test, but a reference to the implementation steps
+// If you want to test the answer code, you can copy the code to lab code and run lab test
+// 这并不是测试，而是实现步骤的参考
+// 若你要测试 answer 代码，你可以将 answer 代码复制到 lab 代码中，并运行 lab 的测试
 func TestUniqueNumber(t *testing.T) {
 	fmt.Println("---Search Unique Numbers---")
 	Row := uint64(1000000)
