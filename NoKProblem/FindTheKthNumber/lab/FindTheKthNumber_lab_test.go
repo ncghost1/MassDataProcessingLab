@@ -14,7 +14,7 @@ func TestFindTheKthNumber(t *testing.T) {
 	left, right := uint64(0), UINT64MAX
 	Row := int64(100000)
 
-	fmt.Printf("Lab Info: The size of all numbers is %v bytes, The memory limit is %v bytes，good luck!\n", memoryLimit)
+	fmt.Printf("Lab Info: The size of all numbers is %v bytes, The memory limit is %v bytes，good luck!\n", uint64(Row)*UINT64SIZE, memoryLimit)
 
 	kth := Row / 2
 	expected := uint64(rand.Uint64() % UINT64MAX / 2)
