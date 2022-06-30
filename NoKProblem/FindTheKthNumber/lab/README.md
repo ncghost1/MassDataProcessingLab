@@ -7,9 +7,9 @@ Method 2: 轴点值比较。这里我们可以使用二分算法，将中间值�
 
 ### 任务说明：
 **Task 1: 完善 SplitFileByBitThenGetKth 函数**<br>
-SplitFileByBitThenGetKth 函数使用二进制位比较的方式分割文件，当文件中所有数字的大小加上64B的安全预留大小不超过内存限制时，即可以使用排序或快速选择（已提供）等方法返回第 k 个数。<br>
+SplitFileByBitThenGetKth 函数使用二进制位比较的方式分割文件，当文件中所有整数的大小加上64B的安全预留大小不超过内存限制时，即可以使用排序或快速选择（已提供）等方法返回第 k 个数。<br>
 **Task 2: 完善 SplitFileByPivotThenGetKth 函数**<br>
-SplitFileByPivotThenGetKth 函数使用轴点值比较的方式分割文件，当文件中所有数字的大小加上64B的安全预留大小不超过内存限制时，即可以使用排序或快速选择（已提供）等方法返回第 k 个数。<br>
+SplitFileByPivotThenGetKth 函数使用轴点值比较的方式分割文件，当文件中所有整数的大小加上64B的安全预留大小不超过内存限制时，即可以使用排序或快速选择（已提供）等方法返回第 k 个数。<br>
 
 **测试说明**<br>
 当你完成了以上的函数之后，在该 lab 文件夹下执行`go test`即可进行 lab 测试！祝贺您一次通过哦！另外，鼓励大家使用不一样的方法实现 lab。
