@@ -5,7 +5,7 @@
 
 ## 题目列表：
 ### 一、 海量数据中的最值问题：<br>
-| 题目 | lab链接 | answer链接 |
+| 题目 | lab 链接 | answer 链接 |
 | - | :-: | :-: |
 | 1. 海量日志数据，提取出访问次数最多的IP： | [MaxCountIP_lab](https://github.com/ncghost1/MassDataProcessingLab/tree/main/MaxValueProblem/MaxCountIP/lab) | [MaxCountIP_answer](https://github.com/ncghost1/MassDataProcessingLab/tree/main/MaxValueProblem/MaxCountIP/answer) |
 
@@ -16,11 +16,11 @@
 | 2. 海量整数中找出不重复的整数 | [SearchUniqueNumbers_lab](https://github.com/ncghost1/MassDataProcessingLab/tree/main/ExistsOrDuplicateProblem/SearchUniqueNumbers/lab) | [SearchUniqueNumbers_answer](https://github.com/ncghost1/MassDataProcessingLab/tree/main/ExistsOrDuplicateProblem/SearchUniqueNumbers/answer) |
 
 ### 三、海量数据的 top K 问题：<br>
-| 题目 | lab链接 | answer链接 |
+| 题目 | lab 链接 | answer 链接 |
 | - | :-: | :-: |
 | 1. 如何在海量数据中找出最大的 10 个数： | [FindTop10Numbers_lab](https://github.com/ncghost1/MassDataProcessingLab/tree/main/TopKProblem/FindTop10Numbers/lab) | [FindTop10Numbers_answer](https://github.com/ncghost1/MassDataProcessingLab/tree/main/TopKProblem/FindTop10Numbers/answer) |
 
 ### 四、海量数据的 No.K 问题：<br>
-| 题目 | lab链接 | answer链接 |
+| 题目 | lab 链接 | answer 链接 |
 | - | :-: | :-: |
 | 1. 在海量数据中找出从小到大第 k 个数： | [FindTheKthNumber_lab](https://github.com/ncghost1/MassDataProcessingLab/tree/main/NoKProblem/FindTheKthNumber/lab)  | [FindTheKthNumber_answer](https://github.com/ncghost1/MassDataProcessingLab/tree/main/NoKProblem/FindTheKthNumber/answer)  |
